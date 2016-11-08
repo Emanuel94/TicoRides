@@ -1,0 +1,50 @@
+ .auth{
+     background: #5a5858;
+    height: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row-reverse;
+ }
+
+
+}
+.logo{
+height: 117px;
+color: white;
+
+}
+.logo img{
+    border-radius: 10px;
+}
+.container{
+    background: #ccc;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto; 
+    /* flex  */
+    display: flex;
+    flex-flow: column wrap;
+}
+
+
+body div nav{
+    width: 50%;
+  /*Flex*/
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+}
+body nav a{
+    background: #c0392b;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+  
+}
+/*da el efecto de ponerse en otro color cuando tiene el mause encima */
+body nav a:hover{
+    background:#e74c3c;
+
+}
