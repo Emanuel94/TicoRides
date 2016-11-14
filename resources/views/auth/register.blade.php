@@ -1,3 +1,38 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head> 
+         <!-- Fonts -->
+         <link rel="stylesheet" href="../public/css/style.css">
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <!--  /* boostrap*/ -->
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+     <link rel="icon" href="../../favicon.ico">
+<!--      <link rel="stylesheet" href="../public/css/Auth.css">
+ -->
+    <title>Tico Rides</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap/docs/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../bootstrap/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../bootstrap/docs/examples/justified-nav/justified-nav.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<!--     <script src="../bootstrap/docs/assets/js/ie-emulation-modes-warning.js"></script>
+ -->
+    
+</head>
+<body>
 @extends('layouts.app')
 
 @section('content')
@@ -80,3 +115,4 @@
     </div>
 </div>
 @endsection
+</body>
