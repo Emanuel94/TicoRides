@@ -21,6 +21,20 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+Route::resource('ride','RideController');
+
+Route::get('ride/index',[
+
+	'as'=>'ride-index',
+	'uses'=>'RideController@index'
+]);
+
+Route::get('ride/create',[
+
+	'as'=>'ride-create',
+	'uses'=>'RideController@create'
+]);
+
 // Route::get('/', function () {
 //     return view('TicoRide');
 // });

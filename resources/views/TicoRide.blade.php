@@ -32,14 +32,13 @@
       </head>
 
         <body>
-       
-       <section class="container-fluid">
+          <section class="container-fluid">
         <section class="row">
             <div class="col-md-4 col-sm-12">
                 <div class="contenido logo">
                     <div id="logo-container">
                         <div id="logo-img">
-                            <img src="css/images/logo2.png" />
+                            <a href="{{ url('/') }}"><img src="css/images/logo6.jpg" /></a> 
                         </div>
                     </div>
                 </div>
@@ -57,15 +56,19 @@
                     </ul>
                 </div>
                 @endif
+
             </div>
         </section>
+    </section>
     </section>
     <section class="container-fluid filter">
       <section class="items-principal-page hello-container slide-up">
           <div class="items-hello">
-                <h1>welcome to wego</h1>
-                <h4>we travel together</h4>
+             
           </div>
+      </section>
+    </section>
+
    <div id="map" style="position:absolute;" class="container close-popup close-map"></div>
  </body>
 </html>

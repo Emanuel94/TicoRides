@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddRides extends Migration
+class CreateRidesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,12 +14,14 @@ class AddRides extends Migration
     public function up()
     {
         Schema::create('rides', function (Blueprint $table) {
+
             $table->increments('id');
-            $table->string('name_ride', 100);
-            $table->integer('user_id');
-            $table->string('start', 100);
-            $table->string('end',100);
-            $table->string('descripcion',150);
+            $table->string('name_ride');
+            $table->integer('idUser')->unsigned();
+            $table->foreign('idUser')->references('id')->on('users');
+            $table->string('start');
+            $table->string('end');
+            $table->string('descripcion');
             $table->dateTime('hour_start');
             $table->dateTime('hour_end');
             $table->boolean('activo');
