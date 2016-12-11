@@ -1,10 +1,26 @@
-@extends('layouts.app')
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create Ride</title>
+</head>
+<body>
+	@extends('layouts.app')
 
 @section('content')
+<?php
+
+Global $partida;
+Global $destino;
+
+?>
+
+
 <div class="container text-center">
-	<div class="page-header">
+     <div class="page-header subheader">
 		<h1>
-			RIDE<small>[Agregar Ride]</small>
+			RIDE<small class="subheader">[Agregar Ride]</small>
 		</h1>		
 	</div>
 	<div class="row">
@@ -18,7 +34,7 @@
 			!!}
 
 			<div class="form-group">
-				<label>Nombre Ride</label>
+				<label class="subheader"><h2>Nombre Ride</h2></label>
 
 				{!! Form::text(
 					'name_ride',null,array(
@@ -30,19 +46,35 @@
 			</div>
 
 			<div class="form-group">
-				<label>Punto de Partida</label>
-
+			    <label class="subheader"><h2>Punto de Partida</h2></label>
+              
 				{!! Form::text(
 					'start',null,array(
 					'class'=>'form-control',
 					'placeholder'=> 'Nombre de partida'
 				))
 				!!}
-				
-			</div>
+            </div>
+
+               
 
 			<div class="form-group">
-				<label>Destino</label>
+            <div class="col-md-6" id="cont-start-location">
+                  <label class="frm-label-style" for=""><h2>start location</h2></label>
+                  <input class="frm-input-text-style rides-data" id="from" type="text" name="name" value="">
+                  </div>
+                  <div class="col-md-6" id="cont-end-location">
+                  <label class="frm-label-style" for=""><h2>to</h2></label>
+                  <input class="frm-input-text-style rides-data" id="to"type="text" name="name" value="">
+                </div>
+            </div>    
+ 
+ 
+
+            </div>
+
+			<div class="form-group">
+				<label class="subheader"><h2>Destino</h2></label>
 
 				{!! Form::text(
 					'end',null,array(
@@ -50,10 +82,11 @@
 					'placeholder'=> 'Nombre del Destino'
 				))
 				!!}
+
 				
 			</div>
 			<div class="form-group">
-				<label>Hora de Inicio</label>
+				<label class="subheader"><h2>Hora de Inicio</h2></label>
 
 				{!! Form::text(
 					'hour_start',null,array(
@@ -64,7 +97,7 @@
 				
 			</div>
 			<div class="form-group">
-				<label>Hora en Finalizar</label>
+				<label class="subheader"><h2>Hora en Finalizar</h2></label>
 
 				{!! Form::text(
 					'hour_end',null,array(
@@ -75,7 +108,7 @@
 				
 			</div>
              <div class="form-group">
-				<label>Descripción</label>
+				<label class="subheader"><h2>Descripción</h2></label>
 
 				{!! Form::text(
 					'descripcion',null,array(
@@ -86,7 +119,7 @@
 			</div>
 
 				<div class="form-group">
-				<label>Estado de RIde (Activo~Desactivo)</label>
+				<label class="subheader"><h2>Estado de RIde (Activo~Desactivo)</h2></label>
 
 				{!! Form::checkbox(
 					'activo',null,true
@@ -107,17 +140,18 @@
 			
 		{!!Form::close()!!}
 			
-				
-			
-						
-
-		</div>
+	</div>
 			
 		
 	</div>
 </div>
 
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0UKCuFpsnzvi5kPfHws5ctwQUbVinGRo&libraries=places&callback=initAutocomplete"
+         async defer></script>
 
 @stop
+
+</body>
+</html>
 

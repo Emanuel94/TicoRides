@@ -26,8 +26,9 @@ Route::resource('ride','RideController');
 Route::get('ride/index',[
 
 	'as'=>'ride-index',
-	'uses'=>'RideController@index'
+	'uses'=>'RideController@CargarRides'
 ]);
+
 
 Route::get('ride/create',[
 
@@ -35,6 +36,37 @@ Route::get('ride/create',[
 	'uses'=>'RideController@create'
 ]);
 
+
+// Route::get('ride/update/{id?}', function ($id = null) {
+//     return $id;
+// });
+
+
+// Route::get('rides/{id}/update', function ($id) {[
+//     'uses'=>'RideController@update'
+// 	]
+    
+// })->name('update');
+
+Route::get('ride/update/{id}',[
+
+	'as'=>'ride.update',
+	'uses'=>'RideController@update'
+
+	]);
+
+
+
+
+Route::get('/api/rides',function(){
+
+	return Datatables::queryBuilder(DB::table('rides')->where(' ',Auth::id()))
+
+									->make(true);
+
+		
+});
+	
 // Route::get('/', function () {
 //     return view('TicoRide');
-// });
+// })

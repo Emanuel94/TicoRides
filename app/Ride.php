@@ -13,7 +13,7 @@ class Ride extends Model
      *
      * @var array
      */
-     protected $table ='rides';
+    protected $table ='rides';
     protected $fillable = [
         'name_ride', 'idUser', 'start','end','descripcion','hour_start','hour_end','activo'
     ];
